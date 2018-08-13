@@ -1,5 +1,6 @@
 package com.example.android.itour;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         //Setting Up Toolbar
         setSupportActionBar(toolbar);
 
+
         //ViewPager Adapter Setup
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new TravelFragment());
@@ -61,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.settings_id:
-                Toast.makeText(this, "Yeah i am good", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, TopPlacesActivity.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);

@@ -14,9 +14,10 @@ public class Tour {
         this.imageview = imageview;
     }
 
-    public Tour(String title, String country) {
+    public Tour(String title, String country, int imageview) {
         this.title = title;
         this.country = country;
+        this.imageview = imageview;
     }
 
     public String getTitle() {
