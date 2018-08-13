@@ -1,51 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="250dp"
+    android:layout_height="230dp"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
-    android:elevation="@dimen/cardview_default_elevation"
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
+    android:layout_margin="4dp"
     cardview:cardCornerRadius="4dp">
 
-    <LinearLayout
-        android:id="@+id/linearlayout_id"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint_layout_id"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:layout_margin="8dp"
-        android:orientation="vertical">
+        android:layout_height="220dp">
 
         <ImageView
             android:id="@+id/imageview_id"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:src="@drawable/travel"
+            android:layout_height="180dp"
+            android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
-            android:contentDescription="@string/app_name"/>
+            android:src="@drawable/travel"
+            android:layout_marginBottom="4dp"
+            cardview:layout_constraintEnd_toEndOf="parent"
+            cardview:layout_constraintStart_toStartOf="parent"
+            cardview:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/title_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="USA"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
             android:gravity="center"
+            android:text="USA"
+            android:textColor="@color/white"
             android:textAlignment="center"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textSize="20sp"/>
+            cardview:layout_constraintBottom_toTopOf="@+id/textView"
+            cardview:layout_constraintEnd_toEndOf="parent"
+            cardview:layout_constraintStart_toStartOf="parent" />
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="More Details"
-            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
             android:gravity="center"
-            android:textAlignment="center"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             android:padding="8dp"
-            android:background="@color/colorPrimary"/>
+            android:text="More Details"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            cardview:layout_constraintBottom_toBottomOf="parent"
+            cardview:layout_constraintEnd_toEndOf="parent"
+            cardview:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.v7.widget.CardView>
