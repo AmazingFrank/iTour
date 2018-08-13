@@ -17,7 +17,9 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
+    //Calling ID's with @BindView for ButterKnife
+    @BindView(R.id.toolbar_id)
+    Toolbar toolbar;
     @BindView(R.id.viewpager_id)
     ViewPager viewPager;
     @BindView(R.id.tabLayout_id)
@@ -27,25 +29,32 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Added Support for ButterKnife
         ButterKnife.bind(this);
 
+        //Setting Up Toolbar
+        setSupportActionBar(toolbar);
 
+        //ViewPager Adapter Setup
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new TravelFragment());
         viewPager.setAdapter(viewPagerAdapter);
 
+        //Adding tablayout and linking it with the ViewPager
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.getTabAt(0).setText("Travel");
-        tabLayout.getTabAt(1).setText("Museum");
 
     }
 
+    //Inflating the menu to toolbar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
+    //Setting up a Click Listener for the Toolbar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 

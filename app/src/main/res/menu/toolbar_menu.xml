@@ -4,5 +4,6 @@
     <item
         android:id="@+id/settings_id"
         android:title=""
+        android:icon="@drawable/ic_local_shipping"
         app:showAsAction="always" />
 </menu>

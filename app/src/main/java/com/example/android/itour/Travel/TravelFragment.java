@@ -2,6 +2,7 @@ package com.example.android.itour.Travel;
 
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -28,9 +29,9 @@ import butterknife.ButterKnife;
  */
 public class TravelFragment extends Fragment {
 
+    //Calling ID's with @BindView for ButterKnife
     @BindView(R.id.recyclerview_id)
     RecyclerView recyclerView;
-
     @BindView(R.id.recyclerview_id2)
     RecyclerView recyclerView2;
 
@@ -40,12 +41,13 @@ public class TravelFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_travel, container, false);
         ButterKnife.bind(this, view);
 
+        //ArrayAdapter for the Vertical GridView RecyclerView
         List<Tour> travel = new ArrayList<>();
         travel.add(new Tour("Travel There", R.drawable.travel));
         travel.add(new Tour("Travel OutSide", R.drawable.travel));
@@ -62,6 +64,7 @@ public class TravelFragment extends Fragment {
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
         recyclerView.setAdapter(recyclerviewAdapter);
 
+        //ArrayAdapter for the Horizontal RecyclerView
         List<Tour2> travel2 = new ArrayList<>();
         travel2.add(new Tour2("Travel There", R.drawable.travel));
         travel2.add(new Tour2("Travel OutSide", R.drawable.travel));
