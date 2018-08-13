@@ -1,7 +1,6 @@
 package com.example.android.itour.Adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.TextView;
 
 import com.example.android.itour.R;
 import com.example.android.itour.Tour;
-import com.example.android.itour.Tour2;
 
 import java.util.List;
 
@@ -21,9 +19,9 @@ import butterknife.ButterKnife;
 public class HorizontalRecyclerViewAdapter extends RecyclerView.Adapter<HorizontalRecyclerViewAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<Tour2> mData;
+    private List<Tour> mData;
 
-    public HorizontalRecyclerViewAdapter(Context mContext, List<Tour2> mData) {
+    public HorizontalRecyclerViewAdapter(Context mContext, List<Tour> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -39,8 +37,8 @@ public class HorizontalRecyclerViewAdapter extends RecyclerView.Adapter<Horizont
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
-        holder.horizontal_text_title.setText(mData.get(position).getmTitle());
-        holder.horizontal_image_thumbnail.setImageResource(mData.get(position).getmImageview());
+        holder.horizontal_text_title.setText(mData.get(position).getTitle());
+        holder.horizontal_image_thumbnail.setImageResource(mData.get(position).getImageview());
     }
 
     @Override

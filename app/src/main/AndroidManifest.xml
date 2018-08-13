@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Travel.TravelActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".TopPlacesActivity"></activity>
     </application>
 
 </manifest>

@@ -15,7 +15,6 @@ import com.example.android.itour.Adapter.HorizontalRecyclerViewAdapter;
 import com.example.android.itour.R;
 import com.example.android.itour.Adapter.RecyclerviewAdapter;
 import com.example.android.itour.Tour;
-import com.example.android.itour.Tour2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,17 +64,17 @@ public class TravelFragment extends Fragment {
         recyclerView.setAdapter(recyclerviewAdapter);
 
         //ArrayAdapter for the Horizontal RecyclerView
-        List<Tour2> travel2 = new ArrayList<>();
-        travel2.add(new Tour2("Travel There", R.drawable.travel));
-        travel2.add(new Tour2("Travel OutSide", R.drawable.travel));
-        travel2.add(new Tour2("Travel InThere", R.drawable.travel));
-        travel2.add(new Tour2("Travel Vacation", R.drawable.travel));
-        travel2.add(new Tour2("Travel Nigeria", R.drawable.travel));
-        travel2.add(new Tour2("Travel There", R.drawable.travel));
-        travel2.add(new Tour2("Travel OutSide", R.drawable.travel));
-        travel2.add(new Tour2("Travel InThere", R.drawable.travel));
-        travel2.add(new Tour2("Travel Vacation", R.drawable.travel));
-        travel2.add(new Tour2("Travel Nigeria", R.drawable.travel));
+        List<Tour> travel2 = new ArrayList<>();
+        travel2.add(new Tour("Travel There", R.drawable.travel));
+        travel2.add(new Tour("Travel OutSide", R.drawable.travel));
+        travel2.add(new Tour("Travel InThere", R.drawable.travel));
+        travel2.add(new Tour("Travel Vacation", R.drawable.travel));
+        travel2.add(new Tour("Travel Nigeria", R.drawable.travel));
+        travel2.add(new Tour("Travel There", R.drawable.travel));
+        travel2.add(new Tour("Travel OutSide", R.drawable.travel));
+        travel2.add(new Tour("Travel InThere", R.drawable.travel));
+        travel2.add(new Tour("Travel Vacation", R.drawable.travel));
+        travel2.add(new Tour("Travel Nigeria", R.drawable.travel));
 
         HorizontalRecyclerViewAdapter horizontalRecyclerViewAdapter = new HorizontalRecyclerViewAdapter(getActivity(), travel2);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
