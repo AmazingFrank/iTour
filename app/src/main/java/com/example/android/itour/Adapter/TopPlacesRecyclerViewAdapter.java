@@ -1,7 +1,9 @@
 package com.example.android.itour.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.android.itour.R;
 import com.example.android.itour.TopPlacesActivity;
+import com.example.android.itour.TopPlacesOpenActivity;
 import com.example.android.itour.Tour;
 
 import java.util.List;
@@ -38,11 +41,22 @@ public class TopPlacesRecyclerViewAdapter extends RecyclerView.Adapter<TopPlaces
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
         holder.place_text.setText(mData.get(position).getTitle());
         holder.country_text.setText(mData.get(position).getCountry());
         holder.top_place_image.setImageResource(mData.get(position).getImageview());
+
+        holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, TopPlacesOpenActivity.class);
+                intent.putExtra("Places", mData.get(position).getTitle());
+                intent.putExtra("Country", mData.get(position).getCountry());
+                intent.putExtra("ImageView", mData.get(position).getImageview());
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -58,6 +72,8 @@ public class TopPlacesRecyclerViewAdapter extends RecyclerView.Adapter<TopPlaces
         TextView country_text;
         @BindView(R.id.top_place_image)
         ImageView top_place_image;
+        @BindView(R.id.top_places_id)
+        ConstraintLayout constraintLayout;
 
         public MyViewHolder(View itemView) {
             super(itemView);

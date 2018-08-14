@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/top_places_id"
     android:layout_marginBottom="8dp"
     android:layout_height="170dp">
 

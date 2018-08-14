@@ -2,6 +2,7 @@ package com.example.android.itour.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +41,14 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
         holder.text_title.setText(mData.get(position).getTitle());
         holder.image_thumbnail.setImageResource(mData.get(position).getImageview());
+
+        //Setting up Click Listener
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
@@ -51,6 +60,8 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
         @BindView(R.id.title_id) TextView text_title;
         @BindView(R.id.imageview_id) ImageView image_thumbnail;
+        @BindView(R.id.cardview_id)
+        CardView cardView;
 
         private MyViewHolder(View itemView) {
             super(itemView);
