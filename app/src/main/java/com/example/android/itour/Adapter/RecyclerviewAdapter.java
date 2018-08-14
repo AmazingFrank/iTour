@@ -1,6 +1,7 @@
 package com.example.android.itour.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.android.itour.ContainerOpenActivity;
 import com.example.android.itour.R;
 import com.example.android.itour.Tour;
 
@@ -37,16 +39,18 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
 
         holder.text_title.setText(mData.get(position).getTitle());
         holder.image_thumbnail.setImageResource(mData.get(position).getImageview());
 
-        //Setting up Click Listener
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(mContext, ContainerOpenActivity.class);
+                intent.putExtra("Title", mData.get(position).getTitle());
+                intent.putExtra("ImageView", mData.get(position).getImageview());
+                mContext.startActivity(intent);
             }
         });
     }

@@ -19,7 +19,8 @@
         <activity android:name=".Travel.TravelActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".TopPlacesActivity" />
-        <activity android:name=".TopPlacesOpenActivity"></activity>
+        <activity android:name=".TopPlacesOpenActivity" />
+        <activity android:name=".ContainerOpenActivity"></activity>
     </application>
 
 </manifest>

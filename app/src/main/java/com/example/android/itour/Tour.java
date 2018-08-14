@@ -20,6 +20,11 @@ public class Tour {
         this.imageview = imageview;
     }
 
+    public Tour(String title, String country) {
+        this.title = title;
+        this.country = country;
+    }
+
     public String getTitle() {
         return title;
     }

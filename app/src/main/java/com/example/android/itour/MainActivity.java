@@ -10,7 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.android.itour.Adapter.ViewPagerAdapter;
 import com.example.android.itour.Travel.TravelFragment;
 
 import butterknife.BindView;
