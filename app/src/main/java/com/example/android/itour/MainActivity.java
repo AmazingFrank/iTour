@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.android.itour.Museum.MuseumFragment;
+import com.example.android.itour.Place.PlaceFragment;
 import com.example.android.itour.Travel.TravelFragment;
 
 import butterknife.BindView;
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tabLayout_id)
     TabLayout tabLayout;
 
+    private int[] tabIcons = { R.drawable.ic_directions_car, R.drawable.ic_store, R.drawable.ic_place};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,12 +43,16 @@ public class MainActivity extends AppCompatActivity {
 
         //ViewPager Adapter Setup
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragment(new TravelFragment());
+        viewPagerAdapter.addFragment(new TravelFragment(), "Travel");
+        viewPagerAdapter.addFragment(new MuseumFragment(), "Museum");
+        viewPagerAdapter.addFragment(new PlaceFragment(), "Place");
         viewPager.setAdapter(viewPagerAdapter);
 
         //Adding tablayout and linking it with the ViewPager
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setText("Travel");
+        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+        tabLayout.getTabAt(2).setIcon(tabIcons[2]);
 
     }
 
