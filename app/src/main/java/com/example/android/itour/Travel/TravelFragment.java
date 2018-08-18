@@ -49,14 +49,14 @@ public class TravelFragment extends Fragment {
         //ArrayAdapter for the Vertical GridView RecyclerView
         List<Tour> travel = new ArrayList<>();
         travel.add(new Tour("Travel There", R.drawable.travel));
-        travel.add(new Tour("Travel OutSide", R.drawable.travel2));
-        travel.add(new Tour("Travel InThere", R.drawable.travel3));
-        travel.add(new Tour("Travel Vacation", R.drawable.travel));
-        travel.add(new Tour("Travel Nigeria", R.drawable.travel2));
-        travel.add(new Tour("Travel There", R.drawable.travel3));
         travel.add(new Tour("Travel OutSide", R.drawable.travel));
-        travel.add(new Tour("Travel InThere", R.drawable.travel2));
-        travel.add(new Tour("Travel Vacation", R.drawable.travel3));
+        travel.add(new Tour("Travel InThere", R.drawable.travel));
+        travel.add(new Tour("Travel Vacation", R.drawable.travel));
+        travel.add(new Tour("Travel Nigeria", R.drawable.travel));
+        travel.add(new Tour("Travel There", R.drawable.travel));
+        travel.add(new Tour("Travel OutSide", R.drawable.travel));
+        travel.add(new Tour("Travel InThere", R.drawable.travel));
+        travel.add(new Tour("Travel Vacation", R.drawable.travel));
         travel.add(new Tour("Travel Nigeria", R.drawable.travel));
 
         RecyclerviewAdapter recyclerviewAdapter = new RecyclerviewAdapter(getActivity(), travel);
