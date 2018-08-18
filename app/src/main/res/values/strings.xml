@@ -4,4 +4,23 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="your_best_tour_app">Your best tour app</string>
+    <string name="_15_jun_17_jul">15 Jun - 17 Jul</string>
+    <string name="_34c_sunny">34C Sunny</string>
+    <string name="_9am_tue">9am - Tue</string>
+    <string name="lorem_ipsum_short">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</string>
+    <string name="more_details">More Details</string>
+    <string name="travel_details">Travel Details</string>
+    <string name="more"><![CDATA[more>>]]></string>
+    <string name="about">About</string>
+    <string name="lorem_ipsum_long">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
+    <string name="audio_note">Audio Note</string>
+    <string name="press_play">Press Play to listen Audio</string>
+    <string name="people_s_reviews">People\'s Reviews</string>
+    <string name="micheal_drift">Micheal Drift</string>
+    <string name="lorem_ipsum_medium">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English.</string>
+    <string name="sarah_conor">Sarah Conor</string>
+    <string name="place_details">Place Details</string>
+    <string name="museum_details">Museum Details</string>
+    <string name="people_s_story">People\'s Story</string>
+    <string name="get_started">Get Started</string>
 </resources>

@@ -1,6 +1,8 @@
 package com.example.android.itour.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.android.itour.ContainerOpenActivity;
 import com.example.android.itour.R;
 import com.example.android.itour.Tour;
 
@@ -35,10 +38,20 @@ public class HorizontalRecyclerViewAdapter extends RecyclerView.Adapter<Horizont
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
 
         holder.horizontal_text_title.setText(mData.get(position).getTitle());
         holder.horizontal_image_thumbnail.setImageResource(mData.get(position).getImageview());
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, ContainerOpenActivity.class);
+                intent.putExtra("Title", mData.get(position).getTitle());
+                intent.putExtra("ImageView", mData.get(position).getImageview());
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -50,6 +63,8 @@ public class HorizontalRecyclerViewAdapter extends RecyclerView.Adapter<Horizont
 
         @BindView(R.id.horizontal_title_id) TextView horizontal_text_title;
         @BindView(R.id.horizontal_imageview_id) ImageView horizontal_image_thumbnail;
+        @BindView(R.id.horizontal_cardview_id)
+        CardView cardView;
 
         private MyViewHolder(View itemView) {
             super(itemView);

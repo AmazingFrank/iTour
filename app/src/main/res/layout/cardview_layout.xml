@@ -2,27 +2,28 @@
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="230dp"
+    android:layout_height="155dp"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
+    android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground"
     android:id="@+id/cardview_id"
-    android:layout_margin="4dp"
-    cardview:cardCornerRadius="4dp">
+    android:layout_margin="@dimen/four"
+    cardview:cardCornerRadius="@dimen/four">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraint_layout_id"
         android:layout_width="match_parent"
-        android:layout_height="220dp">
+        android:layout_height="150dp">
 
         <ImageView
             android:id="@+id/imageview_id"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="110dp"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
             android:src="@drawable/travel"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="@dimen/four"
             cardview:layout_constraintEnd_toEndOf="parent"
             cardview:layout_constraintStart_toStartOf="parent"
             cardview:layout_constraintTop_toTopOf="parent" />
@@ -32,18 +33,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginEnd="@dimen/eight"
+            android:layout_marginLeft="@dimen/eight"
+            android:layout_marginRight="@dimen/eight"
+            android:layout_marginStart="@dimen/eight"
             android:gravity="center"
-            android:text="USA"
-            android:textColor="@color/white"
+            android:text=""
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            cardview:layout_constraintBottom_toTopOf="@+id/textView"
+            cardview:layout_constraintBottom_toBottomOf="@+id/imageview_id"
             cardview:layout_constraintEnd_toEndOf="parent"
+            cardview:layout_constraintHorizontal_bias="1.0"
             cardview:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -52,8 +54,8 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:gravity="center"
-            android:padding="8dp"
-            android:text="More Details"
+            android:padding="@dimen/eight"
+            android:text="@string/more_details"
             android:textAlignment="center"
             android:textColor="@color/white"
             cardview:layout_constraintBottom_toBottomOf="parent"

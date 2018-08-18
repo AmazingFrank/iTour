@@ -6,4 +6,7 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="yellow">#FBC02D</color>
+    <color name="blue">#229cf9</color>
+    <color name="green">#0fc15c</color>
+    <color name="card_view">#cbcecd</color>
 </resources>

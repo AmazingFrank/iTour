@@ -49,14 +49,14 @@ public class TravelFragment extends Fragment {
         //ArrayAdapter for the Vertical GridView RecyclerView
         List<Tour> travel = new ArrayList<>();
         travel.add(new Tour("Travel There", R.drawable.travel));
-        travel.add(new Tour("Travel OutSide", R.drawable.travel));
-        travel.add(new Tour("Travel InThere", R.drawable.travel));
+        travel.add(new Tour("Travel OutSide", R.drawable.travel2));
+        travel.add(new Tour("Travel InThere", R.drawable.travel3));
         travel.add(new Tour("Travel Vacation", R.drawable.travel));
-        travel.add(new Tour("Travel Nigeria", R.drawable.travel));
-        travel.add(new Tour("Travel There", R.drawable.travel));
+        travel.add(new Tour("Travel Nigeria", R.drawable.travel2));
+        travel.add(new Tour("Travel There", R.drawable.travel3));
         travel.add(new Tour("Travel OutSide", R.drawable.travel));
-        travel.add(new Tour("Travel InThere", R.drawable.travel));
-        travel.add(new Tour("Travel Vacation", R.drawable.travel));
+        travel.add(new Tour("Travel InThere", R.drawable.travel2));
+        travel.add(new Tour("Travel Vacation", R.drawable.travel3));
         travel.add(new Tour("Travel Nigeria", R.drawable.travel));
 
         RecyclerviewAdapter recyclerviewAdapter = new RecyclerviewAdapter(getActivity(), travel);
@@ -64,19 +64,7 @@ public class TravelFragment extends Fragment {
         recyclerView.setAdapter(recyclerviewAdapter);
 
         //ArrayAdapter for the Horizontal RecyclerView
-        List<Tour> travel2 = new ArrayList<>();
-        travel2.add(new Tour("Travel There", R.drawable.travel));
-        travel2.add(new Tour("Travel OutSide", R.drawable.travel));
-        travel2.add(new Tour("Travel InThere", R.drawable.travel));
-        travel2.add(new Tour("Travel Vacation", R.drawable.travel));
-        travel2.add(new Tour("Travel Nigeria", R.drawable.travel));
-        travel2.add(new Tour("Travel There", R.drawable.travel));
-        travel2.add(new Tour("Travel OutSide", R.drawable.travel));
-        travel2.add(new Tour("Travel InThere", R.drawable.travel));
-        travel2.add(new Tour("Travel Vacation", R.drawable.travel));
-        travel2.add(new Tour("Travel Nigeria", R.drawable.travel));
-
-        HorizontalRecyclerViewAdapter horizontalRecyclerViewAdapter = new HorizontalRecyclerViewAdapter(getActivity(), travel2);
+        HorizontalRecyclerViewAdapter horizontalRecyclerViewAdapter = new HorizontalRecyclerViewAdapter(getActivity(), travel);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView2.setLayoutManager(layoutManager);
         recyclerView2.setAdapter(horizontalRecyclerViewAdapter);
