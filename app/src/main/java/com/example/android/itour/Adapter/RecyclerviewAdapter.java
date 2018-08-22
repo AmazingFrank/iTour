@@ -48,8 +48,8 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, ContainerOpenActivity.class);
-                intent.putExtra("Title", mData.get(position).getTitle());
-                intent.putExtra("ImageView", mData.get(position).getImageview());
+                intent.putExtra(mContext.getString(R.string.title), mData.get(position).getTitle());
+                intent.putExtra(mContext.getString(R.string.imageview), mData.get(position).getImageview());
                 mContext.startActivity(intent);
             }
         });

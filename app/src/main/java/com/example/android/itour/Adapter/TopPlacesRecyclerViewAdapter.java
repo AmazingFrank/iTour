@@ -51,9 +51,9 @@ public class TopPlacesRecyclerViewAdapter extends RecyclerView.Adapter<TopPlaces
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, TopPlacesOpenActivity.class);
-                intent.putExtra("Places", mData.get(position).getTitle());
-                intent.putExtra("Country", mData.get(position).getCountry());
-                intent.putExtra("ImageView", mData.get(position).getImageview());
+                intent.putExtra(mContext.getString(R.string.places), mData.get(position).getTitle());
+                intent.putExtra(mContext.getString(R.string.country), mData.get(position).getCountry());
+                intent.putExtra(mContext.getString(R.string.imageview), mData.get(position).getImageview());
                 mContext.startActivity(intent);
             }
         });

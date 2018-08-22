@@ -1,14 +1,13 @@
 package com.example.android.itour;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.android.itour.Museum.MuseumFragment;
 import com.example.android.itour.Place.PlaceFragment;
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tabLayout_id)
     TabLayout tabLayout;
 
-    private int[] tabIcons = { R.drawable.ic_directions_car, R.drawable.ic_store, R.drawable.ic_place};
+    private int[] tabIcons = { R.drawable.ic_directions_car, R.drawable.ic_store, R.drawable.ic_place, R.drawable.ic_account_balance};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
         //ViewPager Adapter Setup
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragment(new TravelFragment(), "Travel");
-        viewPagerAdapter.addFragment(new MuseumFragment(), "Museum");
-        viewPagerAdapter.addFragment(new PlaceFragment(), "Place");
+        viewPagerAdapter.addFragment(new TravelFragment(), getString(R.string.travel));
+        viewPagerAdapter.addFragment(new MuseumFragment(), getString(R.string.museum));
+        viewPagerAdapter.addFragment(new PlaceFragment(), getString(R.string.place));
+        viewPagerAdapter.addFragment(new PlaceFragment(), getString(R.string.stadium));
         viewPager.setAdapter(viewPagerAdapter);
 
         //Adding tablayout and linking it with the ViewPager
@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
         tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+        tabLayout.getTabAt(3).setIcon(tabIcons[3]);
 
     }
 

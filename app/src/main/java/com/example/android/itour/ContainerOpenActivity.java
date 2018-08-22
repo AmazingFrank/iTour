@@ -76,8 +76,8 @@ public class ContainerOpenActivity extends AppCompatActivity {
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         Intent intent = getIntent();
-        String Places = intent.getStringExtra("Title");
-        int ImageView = intent.getIntExtra("ImageView", 0);
+        String Places = intent.getStringExtra(getString(R.string.title));
+        int ImageView = intent.getIntExtra(getString(R.string.imageview), 0);
 
         place_text.setText(Places);
         top_place_image.setImageResource(ImageView);
@@ -100,16 +100,16 @@ public class ContainerOpenActivity extends AppCompatActivity {
 
         //ArrayAdapter for the Horizontal RecyclerView
         List<Tour> travel2 = new ArrayList<>();
-        travel2.add(new Tour("Travel There", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."));
-        travel2.add(new Tour("Travel OutSide", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."));
-        travel2.add(new Tour("Travel InThere", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."));
-        travel2.add(new Tour("Travel Vacation", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."));
-        travel2.add(new Tour("Travel Nigeria", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."));
-        travel2.add(new Tour("Travel There", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."));
-        travel2.add(new Tour("Travel OutSide", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."));
-        travel2.add(new Tour("Travel InThere", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."));
-        travel2.add(new Tour("Travel Vacation", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."));
-        travel2.add(new Tour("Travel Nigeria", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."));
+        travel2.add(new Tour(getString(R.string.travel_there), getString(R.string.lorem_very_short)));
+        travel2.add(new Tour(getString(R.string.travel_outside), getString(R.string.lorem_very_short)));
+        travel2.add(new Tour(getString(R.string.travel_in_there), getString(R.string.lorem_very_short)));
+        travel2.add(new Tour(getString(R.string.travel_vacation), getString(R.string.lorem_very_short)));
+        travel2.add(new Tour(getString(R.string.travel_nigeria), getString(R.string.lorem_very_short)));
+        travel2.add(new Tour(getString(R.string.travel_there), getString(R.string.lorem_very_short)));
+        travel2.add(new Tour(getString(R.string.travel_outside), getString(R.string.lorem_very_short)));
+        travel2.add(new Tour(getString(R.string.travel_in_there), getString(R.string.lorem_very_short)));
+        travel2.add(new Tour(getString(R.string.travel_vacation), getString(R.string.lorem_very_short)));
+        travel2.add(new Tour(getString(R.string.travel_nigeria), getString(R.string.lorem_very_short)));
 
         CommentRecyclerViewAdapter commentRecyclerViewAdapter = new CommentRecyclerViewAdapter(this, travel2);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);

@@ -68,9 +68,9 @@ public class TopPlacesOpenActivity extends AppCompatActivity {
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         Intent intent = getIntent();
-        String Places = intent.getStringExtra("Places");
-        String Country = intent.getStringExtra("Country");
-        int ImageView = intent.getIntExtra("ImageView", 0);
+        String Places = intent.getStringExtra(getString(R.string.places));
+        String Country = intent.getStringExtra(getString(R.string.country));
+        int ImageView = intent.getIntExtra(getString(R.string.imageview), 0);
 
         place_text.setText(Places);
         country_text.setText(Country);

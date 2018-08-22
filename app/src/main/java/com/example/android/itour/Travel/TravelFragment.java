@@ -48,16 +48,16 @@ public class TravelFragment extends Fragment {
 
         //ArrayAdapter for the Vertical GridView RecyclerView
         List<Tour> travel = new ArrayList<>();
-        travel.add(new Tour("Travel There", R.drawable.travel));
-        travel.add(new Tour("Travel OutSide", R.drawable.travel));
-        travel.add(new Tour("Travel InThere", R.drawable.travel));
-        travel.add(new Tour("Travel Vacation", R.drawable.travel));
-        travel.add(new Tour("Travel Nigeria", R.drawable.travel));
-        travel.add(new Tour("Travel There", R.drawable.travel));
-        travel.add(new Tour("Travel OutSide", R.drawable.travel));
-        travel.add(new Tour("Travel InThere", R.drawable.travel));
-        travel.add(new Tour("Travel Vacation", R.drawable.travel));
-        travel.add(new Tour("Travel Nigeria", R.drawable.travel));
+        travel.add(new Tour(getString(R.string.travel_there), R.drawable.travel));
+        travel.add(new Tour(getString(R.string.travel_outside), R.drawable.travel));
+        travel.add(new Tour(getString(R.string.travel_in_there), R.drawable.travel));
+        travel.add(new Tour(getString(R.string.travel_vacation), R.drawable.travel));
+        travel.add(new Tour(getString(R.string.travel_nigeria), R.drawable.travel));
+        travel.add(new Tour(getString(R.string.travel_there), R.drawable.travel));
+        travel.add(new Tour(getString(R.string.travel_outside), R.drawable.travel));
+        travel.add(new Tour(getString(R.string.travel_in_there), R.drawable.travel));
+        travel.add(new Tour(getString(R.string.travel_vacation), R.drawable.travel));
+        travel.add(new Tour(getString(R.string.travel_nigeria), R.drawable.travel));
 
         RecyclerviewAdapter recyclerviewAdapter = new RecyclerviewAdapter(getActivity(), travel);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));

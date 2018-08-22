@@ -13,8 +13,6 @@ public class TravelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel);
-        //Added Support For ButterKnife
-        ButterKnife.bind(this);
 
         //Using FragmentManager to Replace the Layout to Fragment
         getSupportFragmentManager().beginTransaction()

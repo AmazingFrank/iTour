@@ -36,22 +36,22 @@ public class TopPlacesActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         List<Tour> top_places = new ArrayList<>();
-        top_places.add(new Tour("IStanbul", "Turkey", R.drawable.travel));
-        top_places.add(new Tour("Rome", "Italy", R.drawable.travel));
-        top_places.add(new Tour("New York", "USA", R.drawable.travel));
-        top_places.add(new Tour("Abuja", "Nigeria", R.drawable.travel));
-        top_places.add(new Tour("IStanbul", "Turkey", R.drawable.travel));
-        top_places.add(new Tour("Rome", "Italy", R.drawable.travel));
-        top_places.add(new Tour("New York", "USA", R.drawable.travel));
-        top_places.add(new Tour("Abuja", "Nigeria", R.drawable.travel));
-        top_places.add(new Tour("IStanbul", "Turkey", R.drawable.travel));
-        top_places.add(new Tour("Rome", "Italy", R.drawable.travel));
-        top_places.add(new Tour("New York", "USA", R.drawable.travel));
-        top_places.add(new Tour("Abuja", "Nigeria", R.drawable.travel));
-        top_places.add(new Tour("IStanbul", "Turkey", R.drawable.travel));
-        top_places.add(new Tour("Rome", "Italy", R.drawable.travel));
-        top_places.add(new Tour("New York", "USA", R.drawable.travel));
-        top_places.add(new Tour("Abuja", "Nigeria", R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.istanbul), getString(R.string.turkey), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.rome), getString(R.string.italy), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.new_york), getString(R.string.usa), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.abuja), getString(R.string.nigeria), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.istanbul), getString(R.string.turkey), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.rome), getString(R.string.italy), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.new_york), getString(R.string.usa), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.abuja), getString(R.string.nigeria), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.istanbul), getString(R.string.turkey), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.rome), getString(R.string.italy), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.new_york), getString(R.string.usa), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.abuja), getString(R.string.nigeria), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.istanbul), getString(R.string.turkey), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.rome), getString(R.string.italy), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.new_york), getString(R.string.usa), R.drawable.travel));
+        top_places.add(new Tour(getString(R.string.abuja), getString(R.string.nigeria), R.drawable.travel));
 
         TopPlacesRecyclerViewAdapter topPlacesRecyclerViewAdapter = new TopPlacesRecyclerViewAdapter(this, top_places);
         top_places_recyclerview.setLayoutManager(new LinearLayoutManager(this));

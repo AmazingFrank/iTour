@@ -22,7 +22,8 @@
         <activity android:name=".TopPlacesOpenActivity" />
         <activity android:name=".ContainerOpenActivity" />
         <activity android:name=".Museum.MuseumActivity" />
-        <activity android:name=".Place.PlaceActivity"></activity>
+        <activity android:name=".Place.PlaceActivity" />
+        <activity android:name=".Stadium.StadiumActivity"></activity>
     </application>
 
 </manifest>
